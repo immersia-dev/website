@@ -1,10 +1,4 @@
-# IMMERSIA - Future Canvas
-
-Uma aplicação web moderna e imersiva para demonstrar tecnologias de realidade virtual, aumentada e inteligência artificial.
-
-## Sobre o Projeto
-
-O IMMERSIA Future Canvas é uma plataforma web desenvolvida para apresentar soluções inovadoras em tecnologias imersivas. A aplicação combina design futurístico com elementos interativos para criar uma experiência visual impactante.
+# IMMERSIA
 
 ## Tecnologias Utilizadas
 
