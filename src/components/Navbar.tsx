@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import immersiaLogo from "@/assets/Immersia_logo-removebg.png";
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,11 +38,15 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <Link to="/login">
+            <a
+              href="https://immersia-plataform.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="ghost" className="text-white hover:text-purple-400 hover:bg-white/5 text-base">
                 Entrar
               </Button>
-            </Link>
+            </a>
             <a href="#contact">
               <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg shadow-purple-500/20">
                 Começar Agora
@@ -75,14 +78,20 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-3">
-                <Link to="/login" className="block" onClick={() => setIsMenuOpen(false)}>
+                <a
+                  href="https://immersia-plataform.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   <Button
                     variant="outline"
                     className="w-full border-white/20 text-white hover:bg-white/10 backdrop-blur-sm"
                   >
                     Entrar
                   </Button>
-                </Link>
+                </a>
                 <a href="#contact" className="block" onClick={() => setIsMenuOpen(false)}>
                   <Button
                     className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
