@@ -22,7 +22,7 @@ const CTASection = () => {
                 size="lg"
                 className="bg-white text-purple-900 hover:bg-purple-50 px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 min-w-[200px]"
               >
-                Falar com Especialistas
+                Falar com especialistas
               </Button>
             </a>
             <a href="#team">
@@ -31,7 +31,7 @@ const CTASection = () => {
                 size="lg"
                 className="border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 min-w-[200px] bg-transparent"
               >
-                Conhecer a Equipe
+                Conhecer a equipe
               </Button>
             </a>
           </div>

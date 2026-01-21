@@ -95,6 +95,7 @@
 
   html {
     scroll-behavior: smooth;
+    zoom: 80%;
   }
 
   body {

@@ -3,7 +3,7 @@ import { ArrowRight, Box, Layers, BrainCircuit, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950/80 to-slate-900 overflow-hidden pt-20 lg:pt-0">
+    <section className="relative min-h-[125vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950/80 to-slate-900 overflow-hidden pt-20 lg:pt-0">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/30 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
@@ -96,7 +96,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce hidden md:flex flex-col items-center gap-2 opacity-50">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce hidden md:flex flex-col gap-2 opacity-50">
         <span className="text-[10px] text-white tracking-widest uppercase">Scroll</span>
         <div className="w-[1px] h-10 bg-gradient-to-b from-white to-transparent"></div>
       </div>

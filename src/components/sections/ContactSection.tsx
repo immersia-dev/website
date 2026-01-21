@@ -117,23 +117,6 @@ ${formData.message}`;
 
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">
-                      Tipo de Interesse
-                    </label>
-                    <select
-                      name="interest"
-                      value={formData.interest}
-                      onChange={handleChange}
-                      className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:border-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-600/20 transition-colors"
-                    >
-                      <option>Parceria para Piloto (PoC)</option>
-                      <option>Investimento / Seed</option>
-                      <option>Parceria Acadêmica</option>
-                      <option>Outros</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
                       Mensagem
                     </label>
                     <textarea
