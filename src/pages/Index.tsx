@@ -6,6 +6,7 @@ import ProjectsSection from '@/components/sections/ProjectsSection';
 import ValuePropositionSection from '@/components/sections/ValuePropositionSection';
 import CTASection from '@/components/sections/CTASection';
 import ContactSection from '@/components/sections/ContactSection';
+import TeamSection from '@/components/sections/TeamSection';
 import FooterSection from '@/components/sections/FooterSection';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -13,9 +14,9 @@ const Index = () => {
   useScrollAnimation();
 
   useEffect(() => {
-    document.title = "IMMERSIA - O Futuro das Experiências Imersivas";
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 
-      'IMMERSIA: Startup pioneira em experiências imersivas. Criamos soluções em VR e AR para empresas de todos os portes. Conecte-se ao futuro da tecnologia.');
+    document.title = "IMMERSIA";
+    document.querySelector('meta[name="description"]')?.setAttribute('content',
+      'IMMERSIA: Tecnologia XR aplicada à capacitação profissional. Treinamentos em VR e AR com foco em segurança e eficiência operacional.');
   }, []);
 
   return (
@@ -25,6 +26,7 @@ const Index = () => {
       <AboutSection />
       <ProjectsSection />
       <ValuePropositionSection />
+      <TeamSection />
       <CTASection />
       <ContactSection />
       <FooterSection />

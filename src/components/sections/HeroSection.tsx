@@ -1,96 +1,104 @@
 import { Button } from "@/components/ui/button";
-import immersiaLogo2 from "@/assets/icon_logo.png";
+import { ArrowRight, Box, Layers, BrainCircuit, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden pt-4">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiM5QzkyQUMiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] animate-pulse"></div>
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950/80 to-slate-900 overflow-hidden pt-20 lg:pt-0">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/30 rounded-full blur-[120px] animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-[20%] right-[20%] w-[40%] h-[40%] bg-violet-500/10 rounded-full blur-[100px] animate-float" />
+
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
       </div>
 
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-lg animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-lg animate-float" style={{ animationDelay: '3s' }}></div>
-        
-        <div className="absolute top-1/4 left-1/3 w-3 h-3 bg-purple-400/60 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute bottom-1/3 left-1/5 w-4 h-4 bg-pink-400/60 rounded-full animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute bottom-1/4 right-1/5 w-2 h-2 bg-blue-400/60 rounded-full animate-pulse" style={{ animationDelay: '2.5s' }}></div>
-        <div className="absolute top-1/2 left-1/6 w-3 h-3 bg-yellow-400/60 rounded-full animate-pulse" style={{ animationDelay: '3.5s' }}></div>
-        <div className="absolute top-2/3 right-1/6 w-2 h-2 bg-green-400/60 rounded-full animate-pulse" style={{ animationDelay: '4s' }}></div>
-        
-        <div className="absolute top-1/3 left-1/4 w-20 h-px bg-gradient-to-r from-purple-400/40 to-transparent animate-pulse"></div>
-        <div className="absolute top-1/2 right-1/3 w-16 h-px bg-gradient-to-l from-cyan-400/40 to-transparent animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/3 left-1/6 w-24 h-px bg-gradient-to-r from-pink-400/40 to-transparent animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-18 h-px bg-gradient-to-l from-blue-400/40 to-transparent animate-pulse" style={{ animationDelay: '3s' }}></div>
-        
-        <div className="absolute top-1/4 left-1/5 w-px h-16 bg-gradient-to-b from-yellow-400/40 to-transparent animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute top-1/2 right-1/5 w-px h-20 bg-gradient-to-b from-green-400/40 to-transparent animate-pulse" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-px h-12 bg-gradient-to-b from-purple-400/40 to-transparent animate-pulse" style={{ animationDelay: '2.5s' }}></div>
-        
-        <div className="absolute top-1/5 right-1/6 w-6 h-6 border border-purple-400/30 rotate-45 animate-spin-slow"></div>
-        <div className="absolute top-2/3 left-1/8 w-4 h-4 border border-cyan-400/30 rotate-12 animate-spin-slow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/5 right-1/8 w-8 h-8 border border-pink-400/30 rotate-45 animate-spin-slow" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/6 left-1/2 w-5 h-5 border border-yellow-400/30 rotate-12 animate-spin-slow" style={{ animationDelay: '3s' }}></div>
-        
-        <div className="absolute top-1/2 left-1/8 w-6 h-6 bg-gradient-to-br from-green-400/20 to-cyan-400/20 clip-path-hexagon animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/6 w-4 h-4 bg-gradient-to-br from-purple-400/20 to-pink-400/20 clip-path-hexagon animate-float" style={{ animationDelay: '1.5s' }}></div>
-      </div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-slate-900/80 via-slate-900/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
-        <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-slate-900/80 via-slate-900/40 to-transparent"></div>
-        <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-slate-900/80 via-slate-900/40 to-transparent"></div>
-        
-        <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
+      <div className="container mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
-          <div className="space-y-8">
-              <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
-                  O futuro das experiências
-                  <span className="text-gradient-animated"> imersivas</span>
-                  <br />começa aqui.
-                </h1>
+          <div className="max-w-2xl space-y-8 text-center lg:text-left">
+            <div className="space-y-4 animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm self-start mx-auto lg:mx-0">
+                <span className="text-xs font-medium text-slate-300 tracking-wide uppercase">Realidade Estendida</span>
               </div>
-            
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl">
-                Criamos realidades digitais que transcendem os limites da imaginação. 
-                VR e AR para empresas que querem revolucionar.
-              </p>
             </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
 
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-              <p className="text-slate-400 text-sm mb-4 font-semibold tracking-wider">TECNOLOGIAS SUPORTADAS</p>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  { name: 'REALIDADE VIRTUAL', color: 'from-cyan-500/20 to-blue-500/20', border: 'border-cyan-400/30', text: 'text-cyan-300' },
-                  { name: 'REALIDADE AUMENTADA', color: 'from-pink-500/20 to-purple-500/20', border: 'border-pink-400/30', text: 'text-pink-300' },
-                  { name: 'INTELIGÊNCIA ARTIFICIAL', color: 'from-yellow-500/20 to-orange-500/20', border: 'border-yellow-400/30', text: 'text-yellow-300' }
-                ].map((tech, index) => (
-                  <div key={index} className={`flex items-center gap-3 px-5 py-3 bg-gradient-to-br ${tech.color} backdrop-blur-sm rounded-xl border ${tech.border} hover:scale-105 transition-all duration-300 cursor-pointer group shadow-lg`}>
-                    <span className={`text-white text-xs font-semibold group-hover:${tech.text} transition-colors duration-300`}>{tech.name}</span>
-                  </div>
-                ))}
-              </div>
+              <span className="text-gradient-animated"> Salvando vidas</span>
+              <br />com experiências imersivas.
+            </h1>
+
+
+            <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              Treinamentos de alto impacto para operações críticas. Capacite sua equipe com a eficiência da tecnologia e a segurança da simulação.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <a href="#projects">
+                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white border-0 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:scale-105 group h-12 px-8 text-sm font-semibold">
+                  Nossas Soluções
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
             </div>
           </div>
 
-         
+          <div className="relative animate-fade-in-up hidden lg:block" style={{ animationDelay: '0.4s' }}>
+            <div className="relative z-10 grid gap-4 perspective-1000">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-purple-500/10 to-blue-500/10 rounded-3xl blur-xl -z-10"></div>
+
+              {[
+                {
+                  icon: Box,
+                  title: 'Cenários de Risco',
+                  desc: 'Simulação segura de ambientes perigosos',
+                  color: 'text-cyan-400',
+                  bg: 'bg-cyan-500/10',
+                  border: 'border-cyan-500/20'
+                },
+                {
+                  icon: Layers,
+                  title: 'Procedimentos Padrão',
+                  desc: 'Guias visuais sobrepostos à operação',
+                  color: 'text-purple-400',
+                  bg: 'bg-purple-500/10',
+                  border: 'border-purple-500/20'
+                },
+                {
+                  icon: BrainCircuit,
+                  title: 'Retenção Técnica',
+                  desc: 'Aprendizado acelerado por prática direta',
+                  color: 'text-pink-400',
+                  bg: 'bg-pink-500/10',
+                  border: 'border-pink-500/20'
+                }
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`group relative flex items-center gap-4 p-4 rounded-xl border bg-slate-900/40 backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-${item.color.split('-')[1]}-500/10 ${item.border}`}
+                  style={{
+                    transform: `translateX(${idx * 16}px)`,
+                  }}
+                >
+                  <div className={`p-2.5 rounded-lg ${item.bg} ${item.color} group-hover:scale-110 transition-transform duration-500`}>
+                    <item.icon size={20} strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold text-base tracking-wide">{item.title}</h3>
+                    <p className="text-slate-400 text-xs">{item.desc}</p>
+                  </div>
+
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.bg.replace('10', '0')} to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none`}></div>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center justify-items-center">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
-        </div>
-        <p className="text-white/60 text-sm mt-2 text-center">Descubra mais</p>
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce hidden md:flex flex-col items-center gap-2 opacity-50">
+        <span className="text-[10px] text-white tracking-widest uppercase">Scroll</span>
+        <div className="w-[1px] h-10 bg-gradient-to-b from-white to-transparent"></div>
       </div>
     </section>
   );
