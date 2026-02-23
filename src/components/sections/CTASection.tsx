@@ -16,7 +16,7 @@ const CTASection = () => {
             Transforme a capacitação da sua equipe
           </h2>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a href="#contact">
               <Button
                 size="lg"
@@ -34,7 +34,7 @@ const CTASection = () => {
                 Conhecer a equipe
               </Button>
             </a>
-          </div>
+          </div> */}
 
           <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8">
             <h3 className="text-xl font-bold text-white mb-6">

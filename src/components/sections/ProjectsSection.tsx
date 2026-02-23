@@ -4,35 +4,44 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: "Treinamento de Combate a Incêndio",
-      description: "Simulação imersiva para treinamento de brigadistas, permitindo prática segura de protocolos de emergência e manuseio de extintores.",
+      description:
+        "Simulação imersiva para treinamento de brigadistas, permitindo prática segura de protocolos de emergência e manuseio de extintores.",
       category: "Segurança",
       tech: ["VR", "Física", "Multiplayer"],
       color: "from-orange-600 to-red-600",
-      status: "Em Desenv."
+      status: "Em Desenv.",
+      image: "/projects/firefighting.jpg",
     },
     {
       title: "Ensino de Anatomia Animal",
-      description: "Atlas interativo em Realidade Aumentada para estudantes de medicina veterinária, visualizando sistemas internos em 3D.",
+      description:
+        "Atlas interativo em Realidade Aumentada para estudantes de medicina veterinária, visualizando sistemas internos em 3D.",
       category: "Educação",
       tech: ["AR", "Anatomia", "Interativo"],
       color: "from-green-600 to-emerald-600",
-      status: "Em Desenv."
+      status: "Em Desenv.",
+      image: "/projects/anatomy.png",
     },
     {
       title: "Jogo da Memória",
-      description: "Experiência interativa 3D para treinamento cognitivo e retenção de procedimentos através da gamificação imersiva.",
+      description:
+        "Experiência interativa 3D para treinamento cognitivo e retenção de procedimentos através da gamificação imersiva.",
       category: "Gamificação",
       tech: ["WebXR", "3D", "Interativo"],
       color: "from-cyan-600 to-purple-600",
-      status: "Protótipo"
-    }
+      status: "Protótipo",
+      image: "/projects/memory.png",
+    },
   ];
 
   return (
     <section className="py-20 bg-white relative overflow-hidden" id="projects">
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-purple-600 to-transparent"></div>
       <div className="absolute top-10 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-20 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div
+        className="absolute top-20 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-pulse"
+        style={{ animationDelay: "1s" }}
+      ></div>
 
       <div className="absolute top-1/4 left-10 w-20 h-px bg-gradient-to-r from-purple-400 to-transparent"></div>
       <div className="absolute top-1/3 right-10 w-20 h-px bg-gradient-to-l from-blue-400 to-transparent"></div>
@@ -54,24 +63,34 @@ const ProjectsSection = () => {
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="bg-white border border-slate-200 hover:shadow-lg group cursor-pointer transition-all duration-300"
+                className="bg-white border border-slate-200 hover:shadow-lg group cursor-pointer transition-all duration-300 hover:scale-105"
               >
                 <div className="p-5">
-                  <div className={`h-40 bg-gradient-to-br ${project.color} rounded-xl mb-5 relative overflow-hidden group-hover:scale-105 transition-transform duration-300`}>
-                    <div className="absolute inset-0 bg-black/10"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center text-white">
-                        <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                          <div className="w-7 h-7 bg-white/40 rounded-lg"></div>
-                        </div>
-                        <p className="font-semibold text-sm">{project.category}</p>
-                      </div>
+                  <div className="h-48 rounded-xl mb-5 relative overflow-hidden transition-transform duration-300">
+                    {project.image && (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    )}
+                    {/* gradient & category overlay shown only on hover */}
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${project.color} mix-blend-multiply opacity-0 group-hover:opacity-60 transition-opacity duration-300`}
+                    ></div>
+                    <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="font-semibold text-white text-sm">
+                        {project.category}
+                      </p>
                     </div>
                   </div>
 
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className={`text-[10px] uppercase font-bold tracking-wider px-2 py-1 rounded-full whitespace-nowrap ${project.status === 'Protótipo' ? 'text-blue-600 bg-blue-100' : 'text-purple-600 bg-purple-100'}`}>
+                      <span
+                        className={`text-[10px] uppercase font-bold tracking-wider px-2 py-1 rounded-full whitespace-nowrap ${project.status === "Protótipo" ? "text-blue-600 bg-blue-100" : "text-purple-600 bg-purple-100"}`}
+                      >
                         {project.status}
                       </span>
                       <div className="flex gap-1">
@@ -99,7 +118,7 @@ const ProjectsSection = () => {
             ))}
           </div>
 
-          <div className="text-center">
+          {/* <div className="text-center">
             <p className="text-slate-600 mb-5 text-base">
               Estes projetos fazem parte de nossa rodada de validação técnica e pedagógica
             </p>
@@ -108,7 +127,7 @@ const ProjectsSection = () => {
                 Conheça nossa Pesquisa
               </button>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

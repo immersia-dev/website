@@ -5,14 +5,18 @@ const ContactSection = () => {
     name: "",
     email: "",
     interest: "Parceria para Piloto (PoC)",
-    message: ""
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -27,15 +31,21 @@ Interesse: ${formData.interest}
 Mensagem:
 ${formData.message}`;
 
-    const mailtoLink = `mailto:immersia.xr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoLink, '_blank');
+    const mailtoLink = `mailto:immersia.br@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, "_blank");
   };
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden" id="contact">
+    <section
+      className="py-24 bg-slate-50 relative overflow-hidden"
+      id="contact"
+    >
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-blue-600 to-transparent"></div>
       <div className="absolute top-10 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-      <div className="absolute top-20 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div
+        className="absolute top-20 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse"
+        style={{ animationDelay: "1s" }}
+      ></div>
 
       <div className="absolute top-1/4 left-10 w-20 h-px bg-gradient-to-r from-blue-400 to-transparent"></div>
       <div className="absolute top-1/3 right-10 w-20 h-px bg-gradient-to-l from-purple-400 to-transparent"></div>
@@ -48,7 +58,8 @@ ${formData.message}`;
             </h2>
             <div className="w-20 h-1 bg-purple-600 mx-auto mb-8"></div>
             <p className="text-xl text-slate-600 leading-relaxed">
-              Entre em contato para discutir como nossas tecnologias podem apoiar sua operação
+              Entre em contato para discutir como nossas tecnologias podem
+              apoiar sua operação
             </p>
           </div>
 
@@ -61,17 +72,27 @@ ${formData.message}`;
               <div className="mb-8 p-6 bg-white rounded-2xl border border-slate-200 hover:shadow-lg group transition-all duration-300">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
                     </svg>
                   </div>
                   <div>
                     <p className="text-slate-600 mb-1">Email</p>
                     <a
-                      href="mailto:immersia.xr@gmail.com"
+                      href="mailto:immersia.br@gmail.com"
                       className="text-purple-600 font-semibold hover:text-blue-600 transition-colors text-lg"
                     >
-                      immersia.xr@gmail.com
+                      immersia.br@gmail.com
                     </a>
                   </div>
                 </div>

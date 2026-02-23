@@ -1,3 +1,5 @@
+import { Dumbbell, Shield, BarChart, Zap } from "lucide-react";
+
 const ValuePropositionSection = () => {
   const industries = [
     {
@@ -36,22 +38,26 @@ const ValuePropositionSection = () => {
     {
       title: "Memória Muscular",
       description: "Simulações que permitem 'aprender fazendo' (learning by doing), fixando procedimentos motores.",
-      color: "bg-gradient-to-r from-purple-600 to-blue-600"
+      color: "bg-gradient-to-r from-purple-600 to-blue-600",
+      Icon: Dumbbell
     },
     {
       title: "Ambiente Controlado",
       description: "Exposição a cenários de perigo real em ambiente controlado, sem ameaça à integridade física.",
-      color: "bg-gradient-to-r from-blue-600 to-cyan-600"
+      color: "bg-gradient-to-r from-blue-600 to-cyan-600",
+      Icon: Shield
     },
     {
       title: "Analytics de Performance",
       description: "Dados precisos sobre tempo de reação, erros procedimentais e tomada de decisão.",
-      color: "bg-gradient-to-r from-cyan-600 to-purple-600"
+      color: "bg-gradient-to-r from-cyan-600 to-purple-600",
+      Icon: BarChart
     },
     {
       title: "Eficiência Operacional",
       description: "Redução drástica de custos com paradas de equipamentos e logística de treinamento.",
-      color: "bg-gradient-to-r from-purple-600 to-pink-600"
+      color: "bg-gradient-to-r from-purple-600 to-pink-600",
+      Icon: Zap
     }
   ];
 
@@ -83,6 +89,7 @@ const ValuePropositionSection = () => {
                 className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-lg group transition-all duration-300"
               >
                 <div className={`w-14 h-14 ${benefit.color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
+                  {benefit.Icon && <benefit.Icon className="w-6 h-6 text-white" />}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">
                   {benefit.title}

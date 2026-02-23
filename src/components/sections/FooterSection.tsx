@@ -14,9 +14,7 @@ const FooterSection = () => {
                   className="h-12 w-auto"
                 />
                 <div>
-                  <h3 className="text-xl font-bold text-white">
-                    IMMERSIA
-                  </h3>
+                  <h3 className="text-xl font-bold text-white">IMMERSIA</h3>
                   <p className="text-slate-400 text-sm">
                     Experiências Imersivas
                   </p>
@@ -30,16 +28,14 @@ const FooterSection = () => {
             </div>
 
             <div>
-              <h4 className="font-bold text-white mb-4">
-                Links Rápidos
-              </h4>
+              <h4 className="font-bold text-white mb-4">Links Rápidos</h4>
               <ul className="space-y-3">
                 {[
-                  'Sobre Nós',
-                  'Projetos',
-                  'Serviços',
-                  'Tecnologias',
-                  'Parcerias'
+                  "Sobre Nós",
+                  "Projetos",
+                  "Serviços",
+                  "Tecnologias",
+                  "Parcerias",
                 ].map((link, index) => (
                   <li key={index}>
                     <a
@@ -54,18 +50,16 @@ const FooterSection = () => {
             </div>
 
             <div>
-              <h4 className="font-bold text-white mb-4">
-                Contato
-              </h4>
+              <h4 className="font-bold text-white mb-4">Contato</h4>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div>
                     <p className="text-slate-400 text-sm">Email</p>
                     <a
-                      href="mailto:immersia.xr@gmail.com"
+                      href="mailto:immersia.br@gmail.com"
                       className="text-purple-400 hover:text-white transition-colors text-sm"
                     >
-                      immersia.xr@gmail.com
+                      immersia.br@gmail.com
                     </a>
                   </div>
                 </div>
@@ -74,7 +68,8 @@ const FooterSection = () => {
                   <div>
                     <p className="text-slate-400 text-sm">Status</p>
                     <p className="text-purple-400 text-sm">
-                      <span className="animate-pulse">●</span> Disponível para novos projetos
+                      <span className="animate-pulse">●</span> Disponível para
+                      novos projetos
                     </p>
                   </div>
                 </div>
@@ -86,17 +81,28 @@ const FooterSection = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-slate-400 text-sm text-center md:text-left">
                 <p>© 2025 IMMERSIA. Todos os direitos reservados.</p>
-                <p className="mt-1">Tecnologia para Capacitação Profissional.</p>
+                <p className="mt-1">
+                  Tecnologia para Capacitação Profissional.
+                </p>
               </div>
 
               <div className="flex gap-6 text-sm">
-                <a href="/privacy" className="text-slate-400 hover:text-white transition-colors">
+                <a
+                  href="/privacy"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   Política de Privacidade
                 </a>
-                <a href="/terms" className="text-slate-400 hover:text-white transition-colors">
+                <a
+                  href="/terms"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   Termos de Uso
                 </a>
-                <a href="/privacy" className="text-slate-400 hover:text-white transition-colors">
+                <a
+                  href="/privacy"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   Cookies
                 </a>
               </div>

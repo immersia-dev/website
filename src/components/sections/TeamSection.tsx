@@ -1,5 +1,4 @@
-import { Linkedin, Github, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Linkedin, Mail } from "lucide-react";
 
 const TeamSection = () => {
     const team = [
@@ -8,6 +7,7 @@ const TeamSection = () => {
             role: "CEO",
             bio: "Responsável pela visão estratégica da IMMERSIA, lidera o desenvolvimento da plataforma e a integração entre tecnologia, produto e impacto social.",
             image: "/team/lilian.jpeg",
+            imagePosition: "center 18%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/liliangisellyps",
                 email: "mailto:liliangisellyps@gmail.com"
@@ -18,6 +18,7 @@ const TeamSection = () => {
             role: "CTO",
             bio: "Responsável pela arquitetura técnica da plataforma e liderança do desenvolvimento, garantindo escalabilidade e integração das tecnologias XR.",
             image: "/team/geovane.jpeg",
+            imagePosition: "center 30%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/geovanelcfilho",
                 email: "mailto:geovanelcfilho@gmail.com"
@@ -28,6 +29,7 @@ const TeamSection = () => {
             role: "Consultor e Pesquisador",
             bio: "Atua na estruturação do modelo de negócios, parcerias estratégicas e posicionamento de mercado, conectando tecnologia às demandas reais.",
             image: "/team/icaro.jpeg",
+            imagePosition: "center 22%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/%C3%ADcaro-ara%C3%BAjo-bb47112b6/",
                 email: "mailto:Icarobqa@gmail.com"
@@ -38,6 +40,7 @@ const TeamSection = () => {
             role: "Especialista de Produto",
             bio: "Engenheira de Segurança do Trabalho, atua como consultora técnica na definição dos conteúdos, validação normativa e aderência legal.",
             image: "/team/winnie.jpeg",
+            imagePosition: "center 16%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/winnie-torres-6a066b47/",
                 email: "mailto:wielima@gmail.com"
@@ -59,12 +62,13 @@ const TeamSection = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                     {team.map((member, index) => (
                         <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:-translate-y-2">
-                            <div className="h-48 bg-slate-200 relative overflow-hidden group-hover:bg-purple-100 transition-colors">
+                            <div className="h-56 md:h-60 bg-slate-200 relative overflow-hidden group-hover:bg-purple-100 transition-colors">
                                 {member.image ? (
                                     <img
                                         src={member.image}
                                         alt={member.name}
                                         className="w-full h-full object-cover"
+                                        style={{ objectPosition: member.imagePosition }}
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center text-slate-400">
