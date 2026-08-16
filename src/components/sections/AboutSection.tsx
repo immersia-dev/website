@@ -8,6 +8,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { asset } from "@/lib/utils";
 
 type CarouselImage = {
   src: string;
@@ -17,19 +18,19 @@ type CarouselImage = {
 const AboutSection = () => {
   const carouselImages: CarouselImage[] = [
     {
-      src: "/carrossel/student.png",
+      src: asset("/carrossel/student.png"),
       alt: "Interface do ambiente imersivo com trilhas de conteúdo",
     },
     {
-      src: "/carrossel/instructor.png",
+      src: asset("/carrossel/instructor.png"),
       alt: "Painel operacional com visão geral de cursos",
     },
     {
-      src: "/carrossel/instructor_02.png",
+      src: asset("/carrossel/instructor_02.png"),
       alt: "Tela de acompanhamento instrucional",
     },
     {
-      src: "/carrossel/instructor_detail.png",
+      src: asset("/carrossel/instructor_detail.png"),
       alt: "Dashboard de métricas e indicadores de aprendizado",
     },
   ];

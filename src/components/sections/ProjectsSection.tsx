@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { asset } from "@/lib/utils";
 
 const ProjectsSection = () => {
   const projects = [
@@ -10,7 +11,7 @@ const ProjectsSection = () => {
       tech: ["VR", "Física", "Multiplayer"],
       color: "from-orange-600 to-red-600",
       status: "Em Desenv.",
-      image: "/projects/firefighting.jpg",
+      image: asset("/projects/firefighting.jpg"),
     },
     {
       title: "Ensino de Anatomia Animal",
@@ -20,7 +21,7 @@ const ProjectsSection = () => {
       tech: ["AR", "Anatomia", "Interativo"],
       color: "from-green-600 to-emerald-600",
       status: "Em Desenv.",
-      image: "/projects/anatomy.png",
+      image: asset("/projects/anatomy.png"),
     },
     {
       title: "Jogo da Memória",
@@ -30,7 +31,7 @@ const ProjectsSection = () => {
       tech: ["WebXR", "3D", "Interativo"],
       color: "from-cyan-600 to-purple-600",
       status: "Protótipo",
-      image: "/projects/memory.png",
+      image: asset("/projects/memory.png"),
     },
   ];
 

@@ -1,4 +1,5 @@
 import { Linkedin, Mail } from "lucide-react";
+import { asset } from "@/lib/utils";
 
 const TeamSection = () => {
     const team = [
@@ -6,7 +7,7 @@ const TeamSection = () => {
             name: "Lilian Giselly",
             role: "CEO",
             bio: "Responsável pela visão estratégica da IMMERSIA, lidera o desenvolvimento da plataforma e a integração entre tecnologia, produto e impacto social.",
-            image: "/team/lilian.jpeg",
+            image: asset("/team/lilian.jpeg"),
             imagePosition: "center 18%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/liliangisellyps",
@@ -17,7 +18,7 @@ const TeamSection = () => {
             name: "Geovane Filho",
             role: "CTO",
             bio: "Responsável pela arquitetura técnica da plataforma e liderança do desenvolvimento, garantindo escalabilidade e integração das tecnologias XR.",
-            image: "/team/geovane.jpeg",
+            image: asset("/team/geovane.jpeg"),
             imagePosition: "center 30%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/geovanelcfilho",
@@ -28,7 +29,7 @@ const TeamSection = () => {
             name: "Ícaro Araújo",
             role: "Consultor e Pesquisador",
             bio: "Atua na estruturação do modelo de negócios, parcerias estratégicas e posicionamento de mercado, conectando tecnologia às demandas reais.",
-            image: "/team/icaro.jpeg",
+            image: asset("/team/icaro.jpeg"),
             imagePosition: "center 22%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/%C3%ADcaro-ara%C3%BAjo-bb47112b6/",
@@ -39,7 +40,7 @@ const TeamSection = () => {
             name: "Winnie Torres",
             role: "Especialista de Produto",
             bio: "Engenheira de Segurança do Trabalho, atua como consultora técnica na definição dos conteúdos, validação normativa e aderência legal.",
-            image: "/team/winnie.jpeg",
+            image: asset("/team/winnie.jpeg"),
             imagePosition: "center 16%",
             socials: {
                 linkedin: "https://www.linkedin.com/in/winnie-torres-6a066b47/",
