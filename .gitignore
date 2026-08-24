@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Generated from the demo-startup-summit Git submodule
+public/demo-startup-summit/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

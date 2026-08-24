@@ -4,9 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predev": "npm run build:demo",
     "dev": "vite",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
+    "build": "npm run build:demo && vite build",
+    "build:dev": "npm run build:demo && vite build --mode development",
+    "build:demo": "npm run build --prefix demo-startup-summit -- --base=/demo-startup-summit/ && node scripts/sync-startup-summit.mjs",
+    "setup:demo": "npm ci --prefix demo-startup-summit",
     "lint": "eslint .",
     "preview": "vite preview"
   },

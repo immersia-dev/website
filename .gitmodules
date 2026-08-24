@@ -1,0 +1,3 @@
+[submodule "demo-startup-summit"]
+	path = demo-startup-summit
+	url = https://github.com/immersia-dev/demo-startup-summit.git

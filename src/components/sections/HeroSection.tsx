@@ -33,8 +33,19 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <a
+                href="/demo-startup-summit/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Testar demo do Startup Summit em uma nova aba"
+              >
+                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-500 hover:via-purple-500 hover:to-blue-500 text-white border-0 shadow-lg shadow-purple-500/30 transition-all duration-300 hover:scale-105 group h-12 px-8 text-sm font-semibold">
+                  <Play className="mr-2 w-4 h-4 fill-current" />
+                  Testar demo do Startup Summit
+                </Button>
+              </a>
               <a href="#projects">
-                <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white border-0 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:scale-105 group h-12 px-8 text-sm font-semibold">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm transition-all duration-300 group h-12 px-8 text-sm font-semibold">
                   Nossas Soluções
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
