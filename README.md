@@ -82,6 +82,8 @@ As cores principais estão definidas em `tailwind.config.ts` e podem ser ajustad
 
 O projeto está configurado para deploy em plataformas como Vercel, Netlify ou qualquer servidor estático.
 
+Como o submódulo da demo é privado, o repositório `website` precisa ter um secret de Actions chamado `SUBMODULE_TOKEN`. Use um fine-grained personal access token com permissão `Contents: Read-only` nos repositórios `website` e `demo-startup-summit`.
+
 ```bash
 # Build para produção
 npm run build
