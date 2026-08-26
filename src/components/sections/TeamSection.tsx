@@ -46,12 +46,23 @@ const TeamSection = () => {
                 linkedin: "https://www.linkedin.com/in/winnie-torres-6a066b47/",
                 email: "mailto:wielima@gmail.com"
             }
+        },
+        {
+            name: "Andressa Martins",
+            role: "Consultora e Pesquisadora",
+            bio: "Cientista de dados especializada em learning analytics, transforma dados de imersão e desempenho em insights que orientam decisões estratégicas da plataforma.",
+            image: asset("/team/andressa.jpg"),
+            imagePosition: "center 20%",
+            socials: {
+                linkedin: "https://www.linkedin.com/in/andressa-martins-1a199b1b4",
+                email: "mailto:andressa.mo0@gmail.com"
+            }
         }
     ];
 
     return (
         <section className="scroll-mt-16 md:scroll-mt-20 py-24 bg-slate-50 border-t border-slate-200" id="team">
-            <div className="container mx-auto px-6">
+            <div className="mx-auto px-6 max-w-[1440px]">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-slate-900 mb-4">Conheça a Equipe</h2>
                     <div className="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
@@ -60,10 +71,10 @@ const TeamSection = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
                     {team.map((member, index) => (
                         <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 hover:-translate-y-2">
-                            <div className="h-56 md:h-60 bg-slate-200 relative overflow-hidden group-hover:bg-purple-100 transition-colors">
+                            <div className="h-56 md:h-64 bg-slate-200 relative overflow-hidden group-hover:bg-purple-100 transition-colors">
                                 {member.image ? (
                                     <img
                                         src={member.image}
@@ -93,14 +104,14 @@ const TeamSection = () => {
                                 </div>
                             </div>
 
-                            <div className="p-6 text-center">
-                                <h3 className="text-xl font-bold text-slate-900 mb-1 group-hover:text-purple-600 transition-colors">
+                            <div className="p-4 md:p-5 text-center">
+                                <h3 className="text-base md:text-lg font-bold text-slate-900 mb-1 group-hover:text-purple-600 transition-colors">
                                     {member.name}
                                 </h3>
-                                <p className="text-sm font-medium text-purple-600 mb-4 uppercase tracking-wider">
+                                <p className="text-xs font-medium text-purple-600 mb-3 uppercase tracking-wider">
                                     {member.role}
                                 </p>
-                                <p className="text-slate-600 text-sm leading-relaxed">
+                                <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
                                     {member.bio}
                                 </p>
                             </div>
