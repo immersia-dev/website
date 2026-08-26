@@ -1,8 +1,22 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
 const PrivacyPolicy = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    document
+      .querySelector(hash)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [hash]);
+
   return (
     <div className="min-h-screen bg-slate-50 py-12 px-6">
       <div className="max-w-4xl mx-auto">
@@ -14,7 +28,7 @@ const PrivacyPolicy = () => {
         </Link>
 
         <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-8">
             Política de Privacidade
           </h1>
 
@@ -35,9 +49,9 @@ const PrivacyPolicy = () => {
               </p>
             </section>
 
-            <section>
+            <section id="cookies" className="scroll-mt-24">
               <h2 className="text-xl font-bold text-slate-800 mb-3">
-                2. Coleta de Dados
+                2. Coleta de Dados e Cookies
               </h2>
               <p>
                 Coletamos informações que você nos fornece diretamente, como
@@ -82,10 +96,10 @@ const PrivacyPolicy = () => {
                 Se tiver dúvidas sobre esta política, entre em contato conosco
                 através do email:
                 <a
-                  href="mailto:immersia.br@gmail.com"
+                  href="mailto:contact@immersia-xr.com"
                   className="text-purple-600 font-semibold ml-1"
                 >
-                  immersia.br@gmail.com
+                  contact@immersia-xr.com
                 </a>
               </p>
             </section>

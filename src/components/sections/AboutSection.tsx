@@ -18,20 +18,28 @@ type CarouselImage = {
 const AboutSection = () => {
   const carouselImages: CarouselImage[] = [
     {
-      src: asset("/carrossel/student.png"),
-      alt: "Interface do ambiente imersivo com trilhas de conteúdo",
+      src: asset("/carrossel/plataforma-estudos.jpg"),
+      alt: "Plataforma IMMERSIA: biblioteca de trilhas e treinamentos encaminhados por turma",
     },
     {
-      src: asset("/carrossel/instructor.png"),
-      alt: "Painel operacional com visão geral de cursos",
+      src: asset("/carrossel/demo-cenario.jpg"),
+      alt: "Treinamento em VR: pátio de treinamento com estação de extintores",
     },
     {
-      src: asset("/carrossel/instructor_02.png"),
-      alt: "Tela de acompanhamento instrucional",
+      src: asset("/carrossel/plataforma-resultados.jpg"),
+      alt: "Plataforma IMMERSIA: resultados de um treinamento com gráficos de evolução e faixas de score",
     },
     {
-      src: asset("/carrossel/instructor_detail.png"),
-      alt: "Dashboard de métricas e indicadores de aprendizado",
+      src: asset("/carrossel/demo-estacao.jpg"),
+      alt: "Treinamento em VR: estações por classe de fogo e agentes extintores",
+    },
+    {
+      src: asset("/carrossel/plataforma-aluno.jpg"),
+      alt: "Plataforma IMMERSIA: ficha do aluno com histórico de turmas e indicadores individuais",
+    },
+    {
+      src: asset("/carrossel/demo-boas-vindas.jpg"),
+      alt: "Treinamento em VR: abertura da experiência imersiva",
     },
   ];
   const [expandedImage, setExpandedImage] = useState<CarouselImage | null>(null);
@@ -49,7 +57,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden" id="about">
+    <section className="scroll-mt-16 md:scroll-mt-20 py-14 sm:py-20 bg-white relative overflow-hidden" id="about">
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-purple-600 to-transparent"></div>
       <div className="absolute top-10 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
       <div
@@ -60,11 +68,11 @@ const AboutSection = () => {
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="w-full">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
               Sobre a IMMERSIA
             </h2>
             <div className="w-16 h-1 bg-purple-600 mx-auto mb-6"></div>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-slate-600 sm:text-lg max-w-3xl mx-auto leading-relaxed">
               Startup em fase de estruturação focada em resolver desafios
               críticos de capacitação profissional através de tecnologia.
             </p>
@@ -72,7 +80,7 @@ const AboutSection = () => {
 
           <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-12 items-center">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-slate-900">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-slate-900">
                 Nossa Missão
               </h3>
               <div className="space-y-4 text-base md:text-lg leading-relaxed text-slate-700">

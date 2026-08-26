@@ -22,8 +22,8 @@ cd website
 # Instale as dependências
 npm install
 
-# Instale as dependências da demo
-npm run setup:demo
+# Instale as dependências dos apps embarcados (demo + plataforma)
+npm run setup:embeds
 
 # Execute o projeto
 npm run dev
@@ -82,7 +82,7 @@ As cores principais estão definidas em `tailwind.config.ts` e podem ser ajustad
 
 O projeto está configurado para deploy em plataformas como Vercel, Netlify ou qualquer servidor estático.
 
-Como o submódulo da demo é privado, o repositório `website` precisa ter um secret de Actions chamado `SUBMODULE_TOKEN`. Use um fine-grained personal access token com permissão `Contents: Read-only` nos repositórios `website` e `demo-startup-summit`.
+Como os submódulos são privados, o repositório `website` precisa ter um secret de Actions chamado `SUBMODULE_TOKEN`. Use um fine-grained personal access token com permissão `Contents: Read-only` nos repositórios `website`, `demo-startup-summit` e `platform-safety`.
 
 ```bash
 # Build para produção
@@ -100,4 +100,22 @@ Para atualizar a demo para a versão mais recente da branch `main`:
 ```bash
 git submodule update --remote demo-startup-summit
 npm run setup:demo
+```
+
+### Plataforma (vitrine)
+
+A plataforma fica publicada em `/platform/` e é aberta pelo botão **Acessar Plataforma** da navbar e pelo **Explorar a plataforma** da seção de projetos. O código vem do submódulo Git `platform-safety` (apenas `apps/web` é usado aqui) e é compilado por `npm run build:platform`.
+
+Esse build é uma vitrine, não a plataforma de produção:
+
+- `VITE_DEMO_MODE=true` faz o `apiClient` desviar todas as chamadas para `src/lib/demoApi.ts`, que opera em memória sobre as sementes de `src/data/mockPlatform.ts`. Nenhum backend é necessário e todas as telas ficam navegáveis (inclusive criar/editar registros, que somem ao recarregar).
+- `VITE_ROUTER=hash` troca o `BrowserRouter` por `HashRouter`, porque o GitHub Pages não reescreve deep links do sub-app.
+
+Login: qualquer e-mail das sementes com senha de 6+ caracteres, ou os atalhos **Entrar como** (Aluno, Instrutor, Admin da organização, Super Admin) na própria tela de login.
+
+Para atualizar a plataforma para a versão mais recente da branch `main`:
+
+```bash
+git submodule update --remote platform-safety
+npm run setup:platform
 ```

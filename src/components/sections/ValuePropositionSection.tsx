@@ -62,7 +62,7 @@ const ValuePropositionSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-slate-50 relative overflow-hidden" id="tech">
+    <section className="scroll-mt-16 md:scroll-mt-20 py-14 sm:py-20 bg-slate-50 relative overflow-hidden" id="tech">
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-blue-600 to-transparent"></div>
       <div className="absolute top-10 left-1/3 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
       <div className="absolute top-20 right-1/3 w-1 h-1 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -73,11 +73,11 @@ const ValuePropositionSection = () => {
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
               Hipóteses de Valor
             </h2>
             <div className="w-16 h-1 bg-purple-600 mx-auto mb-6"></div>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-slate-600 sm:text-lg max-w-3xl mx-auto leading-relaxed">
               Validamos como a imersão pode transformar a <strong>segurança</strong> e a <strong>eficiência</strong> em operações críticas.
             </p>
           </div>
@@ -143,7 +143,7 @@ const ValuePropositionSection = () => {
 
           <div className="text-center mt-16">
             <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl p-10 text-white">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
                 Tem um desafio operacional crítico?
               </h3>
               <p className="text-lg text-purple-100 mb-6 max-w-xl mx-auto">

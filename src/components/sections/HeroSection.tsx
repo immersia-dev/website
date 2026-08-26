@@ -3,7 +3,10 @@ import { ArrowRight, Box, Layers, BrainCircuit, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[125vh] flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950/80 to-slate-900 overflow-hidden pt-20 lg:pt-0">
+    <section
+      id="top"
+      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950/80 to-slate-900 pb-16 pt-28 sm:pt-32 lg:min-h-screen lg:py-0"
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-purple-600/30 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }} />
@@ -13,39 +16,40 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
 
-          <div className="max-w-2xl space-y-8 text-center lg:text-left">
+          <div className="max-w-2xl space-y-6 text-center sm:space-y-8 lg:text-left">
             <div className="space-y-4 animate-fade-in-up">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm self-start mx-auto lg:mx-0">
                 <span className="text-xs font-medium text-slate-300 tracking-wide uppercase">Realidade Estendida</span>
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
+            <h1 className="text-3xl font-black leading-[1.15] text-white sm:text-4xl md:text-5xl lg:text-6xl">
 
               <span className="text-gradient-animated"> Salvando vidas</span>
               <br />com experiências imersivas.
             </h1>
 
 
-            <p className="text-base md:text-lg text-slate-400 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <p className="animate-fade-in-up mx-auto max-w-lg text-sm leading-relaxed text-slate-400 sm:text-base md:text-lg lg:mx-0" style={{ animationDelay: '0.1s' }}>
               Treinamentos de alto impacto para operações críticas. Capacite sua equipe com a eficiência da tecnologia e a segurança da simulação.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div className="animate-fade-in-up flex flex-col justify-center gap-3 pt-2 sm:flex-row sm:gap-4 sm:pt-4 lg:justify-start" style={{ animationDelay: '0.2s' }}>
               <a
+                className="w-full sm:w-auto"
                 href="/demo-startup-summit/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Testar demo do Startup Summit em uma nova aba"
               >
-                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-500 hover:via-purple-500 hover:to-blue-500 text-white border-0 shadow-lg shadow-purple-500/30 transition-all duration-300 hover:scale-105 group h-12 px-8 text-sm font-semibold">
+                <Button size="lg" className="w-full sm:w-auto text-xs sm:text-sm bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 hover:from-pink-500 hover:via-purple-500 hover:to-blue-500 text-white border-0 shadow-lg shadow-purple-500/30 transition-all duration-300 hover:scale-105 group h-12 px-6 sm:px-8 font-semibold">
                   <Play className="mr-2 w-4 h-4 fill-current" />
                   Testar demo do Startup Summit
                 </Button>
               </a>
-              <a href="#projects">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm transition-all duration-300 group h-12 px-8 text-sm font-semibold">
+              <a href="#projects" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto text-xs sm:text-sm border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm transition-all duration-300 group h-12 px-6 sm:px-8 font-semibold">
                   Nossas Soluções
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

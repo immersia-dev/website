@@ -10,7 +10,10 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "3rem",
+      // Um clamp em vez de padding por breakpoint: `container.screens` esta
+      // reduzido a "2xl", entao chaves como `sm`/`lg` em `padding` seriam
+      // ignoradas pelo Tailwind.
+      padding: "clamp(1.25rem, 4vw, 3rem)",
       screens: {
         "2xl": "1280px",
       },

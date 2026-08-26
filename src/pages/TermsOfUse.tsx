@@ -15,7 +15,7 @@ const TermsOfUse = () => {
                 </Link>
 
                 <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
-                    <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Termos de Uso</h1>
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-8">Termos de Uso</h1>
 
                     <div className="space-y-6 text-slate-600 leading-relaxed">
                         <p className="text-sm text-slate-400">Última atualização: 20 de Janeiro de 2026</p>

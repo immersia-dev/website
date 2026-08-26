@@ -31,13 +31,13 @@ Interesse: ${formData.interest}
 Mensagem:
 ${formData.message}`;
 
-    const mailtoLink = `mailto:immersia.br@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:contact@immersia-xr.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink, "_blank");
   };
 
   return (
     <section
-      className="py-24 bg-slate-50 relative overflow-hidden"
+      className="scroll-mt-16 md:scroll-mt-20 py-24 bg-slate-50 relative overflow-hidden"
       id="contact"
     >
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-20 bg-gradient-to-b from-blue-600 to-transparent"></div>
@@ -53,7 +53,7 @@ ${formData.message}`;
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+            <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
               Vamos Conversar
             </h2>
             <div className="w-20 h-1 bg-purple-600 mx-auto mb-8"></div>
@@ -89,10 +89,10 @@ ${formData.message}`;
                   <div>
                     <p className="text-slate-600 mb-1">Email</p>
                     <a
-                      href="mailto:immersia.br@gmail.com"
+                      href="mailto:contact@immersia-xr.com"
                       className="text-purple-600 font-semibold hover:text-blue-600 transition-colors text-lg"
                     >
-                      immersia.br@gmail.com
+                      contact@immersia-xr.com
                     </a>
                   </div>
                 </div>

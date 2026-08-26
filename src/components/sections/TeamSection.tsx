@@ -50,12 +50,12 @@ const TeamSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-slate-50 border-t border-slate-200" id="team">
+        <section className="scroll-mt-16 md:scroll-mt-20 py-24 bg-slate-50 border-t border-slate-200" id="team">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-slate-900 mb-4">Conheça a Equipe</h2>
                     <div className="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-base text-slate-600 sm:text-lg max-w-2xl mx-auto">
                         Expertise multidisciplinar unida pelo propósito de elevar a segurança e eficiência operacional.
                     </p>
                 </div>

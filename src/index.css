@@ -95,7 +95,9 @@
 
   html {
     scroll-behavior: smooth;
-    zoom: 80%;
+    /* Densidade equivalente ao antigo `zoom: 80%`, porem sem quebrar unidades
+       de viewport (100vh) nem a pintura do canvas em paginas curtas. */
+    font-size: 80%;
   }
 
   body {

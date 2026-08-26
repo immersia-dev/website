@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import immersiaLogo from "@/assets/Immersia_logo-removebg.png";
+import immersiaLogo from "@/assets/immersia-wordmark.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,28 +21,33 @@ const Navbar = () => {
         style={{ animationDelay: "1s" }}
       ></div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
-            <img src={immersiaLogo} alt="IMMERSIA" className="h-40 w-40" />
-          </div>
+      <div className="container mx-auto relative z-10">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          <a href="#top" className="flex items-center gap-3" aria-label="IMMERSIA - inicio">
+            <img
+              src={immersiaLogo}
+              alt="IMMERSIA"
+              className="h-7 w-auto sm:h-8 md:h-9"
+            />
+          </a>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
             {navItems.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className="text-slate-300 hover:text-white transition-colors duration-300 font-medium px-3 py-2"
+                className="text-slate-300 hover:text-white transition-colors duration-300 text-sm font-medium px-2.5 py-2"
               >
                 {item.name}
               </a>
             ))}
             <a
-              href="https://immersia-plataform.netlify.app/"
+              href="/platform/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Abrir a plataforma em uma nova aba"
             >
-              <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg shadow-purple-500/20 px-4 py-2 h-10">
+              <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg shadow-purple-500/20 px-4 py-2 h-10 text-sm">
                 Acessar Plataforma
               </Button>
             </a>
@@ -69,8 +74,8 @@ const Navbar = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">
-            <div className="px-6 py-4 space-y-4">
+          <div className="md:hidden -mx-5 bg-slate-900/95 backdrop-blur-md border-t border-white/10 sm:-mx-8">
+            <div className="px-5 py-4 space-y-3 sm:px-8">
               {navItems.map((item, index) => (
                 <a
                   key={index}
@@ -83,19 +88,7 @@ const Navbar = () => {
               ))}
               <div className="pt-4 space-y-3">
                 <a
-                  href="#contact"
-                  className="block"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Button
-                    variant="outline"
-                    className="w-full border-white/20 text-white hover:bg-white/10 backdrop-blur-sm"
-                  >
-                    Começar Agora
-                  </Button>
-                </a>
-                <a
-                  href="https://immersia-plataform.netlify.app/"
+                  href="/platform/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"

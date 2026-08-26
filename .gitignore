@@ -15,6 +15,9 @@ dist-ssr
 # Generated from the demo-startup-summit Git submodule
 public/demo-startup-summit/
 
+# Generated from the platform-safety Git submodule
+public/platform/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
