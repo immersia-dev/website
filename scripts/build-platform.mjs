@@ -1,35 +1,22 @@
 import { spawnSync } from "node:child_process";
 import { cpSync, existsSync, rmSync } from "node:fs";
-import { dirname, resolve, sep } from "node:path";
-import { fileURLToPath } from "node:url";
+import { resolve, sep } from "node:path";
 
-const websiteRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+import { findPlatformWeb, warnPlatformMissing, websiteRoot } from "./platform-source.mjs";
+
 const publicRoot = resolve(websiteRoot, "public");
 const outputDir = resolve(publicRoot, "platform");
 const platformBase = "/platform/";
 
-// O submodulo e a fonte oficial (e o que o CI usa). Um checkout irmao serve como
-// alternativa para desenvolver antes de o submodulo existir.
-const candidates = [
-  { label: "submodule", root: resolve(websiteRoot, "platform-safety") },
-  { label: "sibling checkout", root: resolve(websiteRoot, "..", "platform-safety") },
-];
+const source = findPlatformWeb();
 
-const source = candidates.find((candidate) =>
-  existsSync(resolve(candidate.root, "apps", "web", "package.json"))
-);
-
-// Sem nenhuma das duas o site ainda sobe, so que sem a vitrine em /platform/.
-if (!source) {
-  console.warn(
-    `[build:platform] platform-safety not found at ${candidates[0].root} ` +
-      `nor at ${candidates[1].root}. Skipping the /platform/ demo. ` +
-      'Run "git submodule update --init --recursive" to build it.'
-  );
+// Sem o app da plataforma o site ainda sobe, so que sem a vitrine em /platform/.
+if (!source.found) {
+  warnPlatformMissing("build:platform", source.searched);
   process.exit(0);
 }
 
-const platformWeb = resolve(source.root, "apps", "web");
+const platformWeb = source.web;
 const platformDist = resolve(platformWeb, "dist");
 
 console.log(`[build:platform] Using the ${source.label} at ${source.root}`);

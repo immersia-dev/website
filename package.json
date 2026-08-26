@@ -12,7 +12,7 @@
     "build:demo": "npm run build --prefix demo-startup-summit -- --base=/demo-startup-summit/ && node scripts/sync-startup-summit.mjs",
     "build:platform": "node scripts/build-platform.mjs",
     "setup:demo": "npm ci --prefix demo-startup-summit",
-    "setup:platform": "npm ci --prefix platform-safety/apps/web",
+    "setup:platform": "node scripts/setup-platform.mjs",
     "setup:embeds": "npm run setup:demo && npm run setup:platform",
     "lint": "eslint .",
     "preview": "vite preview"
